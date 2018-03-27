@@ -1,0 +1,81 @@
+.home-container {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.home-text-container {
+  font-size: 36px;
+  line-height: 36px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+  justify-content: center;
+}
+
+.home-text-container h1 {
+  font-weight: 600;
+}
+
+.home-text-container span {
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.portfolio-link {
+  margin-top: 15px;
+  text-align: center;
+}
+.portfolio-link-text {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  background-color: #cf000f;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* border: 3px solid #cf000f; */
+}
+
+.mountains-image {
+  /* position: relative;
+  top: 0px; */
+  display: block;
+  position: fixed;
+  width: 200%;
+  /* height: 350px; */
+  bottom: -125px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.footer {
+  position: fixed;
+  left: 0px;
+  bottom: -50px;
+  width: 100vw;
+  /* height: 100vh; */
+}
+.background1 {
+  position: fixed;
+  left: 0px;
+  bottom: -200px;
+  width: 50%;
+  /* height: 100vh; */
+}
+
+.background2 {
+  position: fixed;
+  right: 0px;
+  bottom: -200px;
+  /* width: 50%; */
+  /* bottom: 0px; */
+  width: 50%;
+  /* height: 100vh; */
+}
