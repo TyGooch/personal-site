@@ -35,7 +35,6 @@ export default {
   },
   renderToHtml: (render, Comp, meta) => {
     const html = render(<Comp />)
-    meta.styleTags = styles
     return html
   },
   Document: class CustomHtml extends Component {
