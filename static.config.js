@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default {
   getSiteData: () => ({
-    title: 'React Static',
+    title: 'Ty Gooch',
   }),
   getRoutes: () => {
     return [
