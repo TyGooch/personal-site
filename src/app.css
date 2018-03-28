@@ -6,6 +6,7 @@ body {
   padding: 0px;
   color: black;
   height: 100vh;
+  width: 100vw;
 }
 
 h1 {
@@ -32,6 +33,7 @@ nav a {
 
 .app-container {
   height: 100vh;
+  width: 100%;
 }
 
 .header {
@@ -42,6 +44,8 @@ nav a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* position: relative; */
+  /* top: 0px; */
 }
 
 .header-logo {
@@ -62,6 +66,7 @@ nav a {
   flex-direction: row;
   justify-content: center;
   max-width: 55vw;
+  padding-right: 15px;
   /* height: 14px; */
 }
 
@@ -72,8 +77,8 @@ nav a {
   font-size: 14px;
   line-height: 75px;
   color: black;
-  margin-left: 0.25em;
-  margin-right: 0.25em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   /* padding-right: 10px; */
   /* padding-top: 12px; */
   padding-bottom: 0px;
@@ -93,8 +98,10 @@ nav a {
 .content {
   padding: 0px;
   margin: 0px;
-  height: 85%;
+  margin-top: 25px;
+  height: calc(100% - 75px);
   min-width: 400px;
   width: 100vw;
-  /* height: 90vh; */
+  overflow: scroll;
+  /* height: 92.9vh; */
 }

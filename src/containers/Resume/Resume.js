@@ -13,7 +13,7 @@ export default() => (
         <div className="resume-contact-info">
           <div className="resume-contact">
             <i className="fas fa-mobile-alt"></i>
-            <span>(805) 705-6502</span>
+            <span className="phone-number">(805) 705-6502</span>
           </div>
 
           <div className="resume-contact">
@@ -81,7 +81,7 @@ export default() => (
               </li>
               <li>Ruby, Ruby on Rails
               </li>
-              <li>PostgreSQL, MongoDB
+              <li>MongoDB, PostgreSQL
               </li>
               <li>Leaflet.js, Google Maps
               </li>
@@ -91,6 +91,8 @@ export default() => (
               </li>
             </ul>
           </div>
+
+          <br />
 
           <div className="education">
             <div className="body-header">
@@ -140,6 +142,7 @@ export default() => (
             <i className="fab fa-linkedin"><span>linkedin.com/in/tygooch</span></i>
           </a>
         </div>
+        <br />
       </div>
     </div>
 )

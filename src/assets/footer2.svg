@@ -6,7 +6,6 @@
     <defs></defs>
     <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <polygon id="Rectangle" fill="#000000" points="-1.1937118e-12 306 -1.30029321e-12 0.652815165 1600 223.205883 1600 306"></polygon>
-        <polygon id="Rectangle" fill="#CF000F" points="1617 306.347185 955 306.347185 1617 1"></polygon>
-        <polygon id="Rectangle" fill="#FFFFFF" transform="translate(275.000000, 200.000000) scale(-1, 1) translate(-275.000000, -200.000000) " points="642 306 -92 306 642 94"></polygon>
+        <polygon id="Rectangle" fill="#CF000F" points="1617 313 1016 313 1617 1"></polygon>
     </g>
 </svg>

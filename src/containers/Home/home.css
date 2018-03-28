@@ -13,8 +13,11 @@
   line-height: 36px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+  /* padding-right: 30px; */
+  /* padding-left: 30px; */
   justify-content: center;
+  /* height: 400px; */
 }
 
 .home-text-container h1 {
@@ -29,9 +32,15 @@
 }
 
 .portfolio-link {
-  margin-top: 15px;
+  margin-top: 10px;
   text-align: center;
+  opacity: 1;
 }
+
+.portfolio-link:hover {
+  opacity: 0.75;
+}
+
 .portfolio-link-text {
   font-size: 24px;
   font-weight: 400;
@@ -40,6 +49,7 @@
   color: white;
   padding-left: 15px;
   padding-right: 15px;
+  opacity: 1;
   /* border: 3px solid #cf000f; */
 }
 
@@ -56,11 +66,14 @@
 }
 
 .footer {
-  position: fixed;
-  left: 0px;
-  bottom: -50px;
-  width: 100vw;
-  /* height: 100vh; */
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  /* left: -1px; */
+  bottom: 0px;
+  /* width: 8000px; */
+  /* width: 1200px; */
+  /* height: 100%; */
 }
 .background1 {
   position: fixed;

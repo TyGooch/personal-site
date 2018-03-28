@@ -15,6 +15,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-move": "^2.6.0",
+    "react-particles-js": "^2.1.1",
     "react-router": "^4.2.0",
     "react-static": "^5.6.2",
     "recompose": "^0.26.0"
