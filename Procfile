@@ -1,1 +1,1 @@
-web: react-static-build
+web: react-static build
