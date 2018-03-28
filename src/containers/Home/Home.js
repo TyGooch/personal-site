@@ -2,11 +2,6 @@ import React from 'react'
 import { Link } from 'react-static'
 import Particles from 'react-particles-js';
 
-import mountainsImage from '../../assets/mountains3.png'
-import background1 from '../../assets/background1.svg'
-import background2 from '../../assets/background2.svg'
-import footer from '../../assets/footer2.svg'
-
 import './home.css'
 
 export default() => (
@@ -34,7 +29,5 @@ export default() => (
           <Link to="/portfolio" className="portfolio-link-text">VIEW PORTFOLIO</Link>
         </div>
       </div>
-      {//<img src={footer} className="footer" alt="" />
-      }
     </div>
 )

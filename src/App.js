@@ -8,7 +8,6 @@ import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
 
-// import logoImage from './containers/img/logo2.svg'
 import logoImage from './assets/personalLogoTrimmed.svg'
 import './app.css'
 
