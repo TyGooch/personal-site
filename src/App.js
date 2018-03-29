@@ -5,11 +5,103 @@ import { NodeGroup } from 'react-move'
 import { withContext, getContext } from 'recompose'
 import PropTypes from 'prop-types'
 import { hot } from 'react-hot-loader'
-//
+import styled, { injectGlobal } from 'styled-components'
+
 import Routes from 'react-static-routes'
 
 import logoImage from './assets/personalLogoTrimmed.svg'
 import './app.css'
+// import './containers/Home/home.css'
+// import './containers/Resume/resume.css'
+
+// injectGlobal`
+//   body {
+//     font-family: 'Poppins', sans-serif;
+//     font-weight: 300;
+//     font-size: 16px;
+//     margin: 0px;
+//     padding: 0px;
+//     color: black;
+//     height: 100vh;
+//     width: 100vw;
+//   }
+//
+//   h1 {
+//     padding: 0px;
+//     margin: 0px;
+//   }
+//
+//   a {
+//     text-decoration: none;
+//     color: black;
+//   }
+//
+//   img {
+//     max-width: 100%;
+//   }
+// `
+//
+// const AppStyles = styled.div`
+//   .app-container {
+//     height: 100vh;
+//     width: 100%;
+//   }
+//
+//   .header {
+//     width: 100%;
+//     height: 50px;
+//     padding: 0px;
+//     margin: 0px;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     /* position: relative; */
+//     /* top: 0px; */
+//   }
+//
+//   .header-logo {
+//     height: 45px;
+//     max-width: 25vw;
+//     margin-top: 6px;
+//     padding-left: 10px;
+//   }
+//
+//   .header-links {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     max-width: 55vw;
+//     padding-right: 15px;
+//   }
+//
+//   .header-link {
+//     position: relative;
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 75px;
+//     color: black;
+//     margin-left: 0.5em;
+//     margin-right: 0.5em;
+//     padding-bottom: 0px;
+//   }
+//
+//   .header-link-text {
+//   }
+//
+//   .header-selected {
+//     color: red;
+//   }
+//
+//   .content {
+//     padding: 0px;
+//     margin: 0px;
+//     margin-top: 25px;
+//     height: calc(100% - 75px);
+//     min-width: 400px;
+//     width: 100vw;
+//     overflow: scroll;
+//   }
+// `
 
 // The magic :)
 const AnimatedRoutes = getContext({
@@ -33,7 +125,7 @@ const AnimatedRoutes = getContext({
       if (staticURL) {
         return (
           // This relative wrapper is necessary for accurate rehydration :)
-          <div style={{ position: 'relative' }}>
+          <div style={{ position: 'relative', height: 'inherit' }}>
             <Comp {...props} />
           </div>
         )
@@ -97,6 +189,7 @@ const AnimatedRoutes = getContext({
                       left: 0,
                       transform: `translateY(${translateY}px)`,
                       opacity,
+                      height: '100%'
                     }}
                   >
                     <data.Comp {...data.props} />
@@ -113,20 +206,20 @@ const AnimatedRoutes = getContext({
 
 const App = () => (
   <Router>
-    <div className="app-container">
-      <nav className="header">
-        <Link to="/"><img src={logoImage} alt="" className="header-logo"/></Link>
-        <div className="header-links">
-          <Link to="/about" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>ABOUT</span></Link>
-          <Link to="/portfolio" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>PORTFOLIO</span></Link>
-          <Link to="/resume" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>RESUME</span></Link>
-          <Link to="/contact" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>CONTACT</span></Link>
+      <div className="app-container">
+        <nav className="header">
+          <Link to="/"><img src={logoImage} alt="" className="header-logo"/></Link>
+          <div className="header-links">
+            <Link to="/about" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>ABOUT</span></Link>
+            <Link to="/portfolio" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>PORTFOLIO</span></Link>
+            <Link to="/resume" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>RESUME</span></Link>
+            <Link to="/contact" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>CONTACT</span></Link>
+          </div>
+        </nav>
+        <div className="content">
+          <Routes component={AnimatedRoutes} />
         </div>
-      </nav>
-      <div className="content">
-        <Routes component={AnimatedRoutes} />
       </div>
-    </div>
   </Router>
 )
 
