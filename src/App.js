@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, Link, cleanPath } from 'react-static'
+import { Router, Route, Link, cleanPath, Prefetch } from 'react-static'
 import { easeQuadOut, easeElasticIn, easeElasticOut, easeExpOut } from 'd3-ease'
 import { NodeGroup, Animate } from 'react-move'
 import { withContext, getContext } from 'recompose'
@@ -35,7 +35,7 @@ const AnimatedRoutes = getContext({
       if (staticURL) {
         return (
           // This relative wrapper is necessary for accurate rehydration :)
-          <div style={{ position: 'relative', height: 'inherit' }}>
+          <div style={{ position: 'relative', height: '100%', width:'inherit' }}>
             <Comp {...props} />
           </div>
         )
@@ -75,7 +75,7 @@ const AnimatedRoutes = getContext({
           })}
         >
           {nodes => (
-            <div style={{ position: 'relative', height:'100%' }}>
+            <div style={{ position: 'relative', height:'100%', width:'100%' }}>
               {nodes.map(({ key, data, state: { opacity, translateY } }) => {
                 // Here, we override the router context with the one that was
                 // passed with each route
@@ -99,7 +99,8 @@ const AnimatedRoutes = getContext({
                       left: 0,
                       transform: `translateY(${translateY})`,
                       opacity,
-                      height: '100%'
+                      height: '100%',
+                      width: '100%'
                     }}
                   >
                     <data.Comp {...data.props} />
@@ -114,79 +115,16 @@ const AnimatedRoutes = getContext({
   />
 ))
 
-class NavUnderline extends React.Component {
-  state = {
-    show: true
-  }
-
-  // updateShow = () => {
-  //   this.setState((prev) => ({ show: !prev.show }));
-  // }
-
-  render() {
-    const { state: { show } } = this;
-
-    return (
-      <div>
-        <Animate
-          show={show}
-
-          start={{
-            opacity: 0,
-          }}
-
-          enter={{
-            opacity: [1],
-            timing: { duration: 1000 },
-          }}
-
-          update={{
-            opacity: [1],
-            timing: { duration: 500 },
-          }}
-
-          leave={[
-            {
-              timing: { duration: 500 },
-            },
-            {
-              opacity: [0],
-              timing: { delay: 500, duration: 500 },
-            },
-          ]}
-        >
-          {({  }) => {
-            return (
-              <div style={{
-                width: 100,
-                height: 4,
-                position: 'absolute',
-                top: '45px',
-                right: '0px',
-                backgroundColor: '#cf000f',
-              }}
-              >
-
-              </div>
-            );
-          }}
-        </Animate>
-      </div>
-    );
-  }
-}
-
-
 const App = () => (
   <Router>
       <div className="app-container">
         <nav className="header">
           <Link to="/" exact activeClassName="header-link-active" activeClassName="header-link-active"><img src={logoImage} alt="" className="header-logo"/></Link>
           <div className="header-links">
-            <Link to="/about" className = "header-link"  activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>ABOUT</span></Link>
-            <Link to="/portfolio" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>PORTFOLIO</span></Link>
-            <Link to="/resume" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>RESUME</span></Link>
-            <Link to="/contact" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>CONTACT</span></Link>
+            <Prefetch path='/about'><Link to="/about" className = "header-link"  activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>ABOUT</span></Link></Prefetch>
+            <Prefetch path='/portfolio'><Link to="/portfolio" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>PORTFOLIO</span></Link></Prefetch>
+            <Prefetch path='/resume'><Link to="/resume" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>RESUME</span></Link></Prefetch>
+            <Prefetch path='/contact'><Link to="/contact" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>CONTACT</span></Link></Prefetch>
           </div>
         </nav>
         <Particles
@@ -194,15 +132,16 @@ const App = () => (
           style={
             {
               width: '100vmin',
-              height: '100%',
-              position: 'absolute',
+              height: '100vh',
+              position: 'fixed',
               top: '0px',
               left: '0px',
-              zIndex: -1
+              zIndex: -1,
+              opacity: 0.8
             }
           }
           params ={
-            { "fps_limit": 60, "particles": { "number": { "value":60, "density": { "enable": false, "value_area": 5000 } }, "color": { "value": "#2c2d33" }, "shape": { "type":"circle" }, "opacity": { "value":0.66, "random":false, }, "size": { "value":2, "random":true }, "line_linked": { "enable": true, "distance": 224, "color": "#2c2d33", "opacity": 0.26, "width": 0.32 }, "move": { "enable":true, "speed":0.5, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize":true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } } , "retina_detect":true }
+            { "fps_limit": 60, "particles": { "number": { "value":60, "density": { "enable": false, "value_area": 5000 } }, "color": { "value": "#2c2d33" }, "shape": { "type":"circle" }, "opacity": { "value":0.66, "random":false, }, "size": { "value":2, "random":true }, "line_linked": { "enable": true, "distance": 224, "color": "#2c2d33", "opacity": 0.26, "width": 0.32 }, "move": { "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize":true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } } , "retina_detect":true }
           }
           />
         <div className="content">

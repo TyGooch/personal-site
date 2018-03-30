@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import { ServerStyleSheet } from 'styled-components'
 
 export default {
-  siteRoot: './',
-  stagingSiteRoot: './',
+  preact: true,
+  // siteRoot: './',
+  // stagingSiteRoot: './',
   getSiteData: () => ({
     title: 'Ty Gooch',
   }),
@@ -15,19 +15,19 @@ export default {
         component: 'src/components/Home/Home',
       },
       {
-        path: '/about',
+        path: 'about',
         component: 'src/components/About/About',
       },
       {
-        path: '/portfolio',
+        path: 'portfolio',
         component: 'src/components/Portfolio/Portfolio',
       },
       {
-        path: '/resume',
+        path: 'resume',
         component: 'src/components/Resume/Resume',
       },
       {
-        path: '/contact',
+        path: 'contact',
         component: 'src/components/Contact/Contact',
       },
       {
@@ -51,9 +51,11 @@ export default {
       return (
         <Html>
           <Head>
+            <meta title="Ty Gooch" />
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossOrigin="anonymous"/>
+            <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700,800,900|Roboto:300,400,500,700,900" rel="stylesheet" />
             {renderMeta.styleTags}
           </Head>
           <Body>{children}</Body>
