@@ -126,6 +126,11 @@ const App = () => (
             <Prefetch path='/resume'><Link to="/resume" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>RESUME</span></Link></Prefetch>
             <Prefetch path='/contact'><Link to="/contact" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>CONTACT</span></Link></Prefetch>
           </div>
+          <div className="social-links">
+            <a href='https://github.com/tygooch' className='social-link'><i className='fab fa-github'></i></a>
+            <a href='https://linkedin.com/in/tygooch' className='social-link'><i className='fab fa-linkedin-in'></i></a>
+            <a href='https://facebook.com/tybradleygooch' className='social-link'><i className='fab fa-facebook-f'></i></a>
+          </div>
         </nav>
         <Particles
           className="particles"

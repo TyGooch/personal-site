@@ -51,7 +51,7 @@ nav a {
 .header-logo {
   height: 45px;
   max-width: 25vw;
-  margin-top: 10px;
+  margin-top: 7.5px;
   margin-left: 15px;
 }
 
@@ -59,7 +59,7 @@ nav a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: calc(60px - 1.1em);
+  margin-top: calc(27.5px);
   /* padding-right: 15px; */
   position: relative;
   bottom: 0px;
@@ -69,16 +69,22 @@ nav a {
 .header-link {
   position: relative;
   bottom: 0px;
-  font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1em;
   color: black;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
   padding-bottom: 0px;
 }
 
-.header-link-text {
+.header-link.active {
+  color: #cf000f;
+  transition: color 1.5s linear;
+}
+
+.header-link.active:hover {
+  cursor: default;
 }
 
 
@@ -87,15 +93,16 @@ nav a {
   position: absolute;
   width: 100%;
   height: 4px;
-  bottom: 0;
+  bottom: -4px;
   left: 0;
-  background-color: #cf000f;
+  background-color: #000000;
   visibility: hidden;
   /* -webkit-transform: scaleX(0); */
   transform: scaleX(0) ;
   -webkit-transition: all 0.75s ease-in-out 0s;
   transition: all 0.75s ease-in-out 0s;
 }
+
 .header-link.active:after {
   visibility: visible;
   width: 100%;
@@ -104,27 +111,32 @@ nav a {
   transition: all 0.75s ease-in-out 0.75s;
 }
 
-@keyframes fadeIn {
-  from {
-    width: 0px;
-    left: 50%;
-  }
-
-  to {
-    left: 0px;
-    width: 100%;
-  }
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: calc(30px - 0.5em);
+  /* padding-right: 15px; */
+  /* position: relative; */
+  bottom: 0px;
+  height: 2em;
 }
-@keyframes fadeOut {
-  from {
-    width: 100%;
-    left: 0px;
-  }
 
-  to {
-    left: 50%;
-    width: 0px;
-  }
+.social-link {
+  /* position: relative;
+  bottom: 0px; */
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  color: #000000;
+  /* margin-left: 1em; */
+  margin-right: 1em;
+  padding-bottom: 0px;
+}
+
+.social-link i {
+  font-size: 1em;
+  line-height: 1em;
 }
 
 .content {
