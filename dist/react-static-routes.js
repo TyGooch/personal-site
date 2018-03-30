@@ -5,12 +5,12 @@ import { Route } from 'react-router-dom'
 import universal, { setHasBabelPlugin } from 'react-universal-component'
 import { cleanPath } from 'react-static'
 
-import t_0 from '../src/containers/Home/Home'
-import t_1 from '../src/containers/About/About'
-import t_2 from '../src/containers/Portfolio/Portfolio'
-import t_3 from '../src/containers/Resume/Resume'
-import t_4 from '../src/containers/Contact/Contact'
-import t_5 from '../src/containers/404/404'
+import t_0 from '../src/components/Home/Home'
+import t_1 from '../src/components/About/About'
+import t_2 from '../src/components/Portfolio/Portfolio'
+import t_3 from '../src/components/Resume/Resume'
+import t_4 from '../src/components/Contact/Contact'
+import t_5 from '../src/components/404/404'
 
 // Template Map
 global.componentsByTemplateID = global.componentsByTemplateID || [

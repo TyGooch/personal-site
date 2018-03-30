@@ -1,7 +1,7 @@
 import React from 'react'
 import { Router, Route, Link, cleanPath } from 'react-static'
 import { easeQuadOut, easeElasticIn, easeElasticOut, easeExpOut } from 'd3-ease'
-import { NodeGroup } from 'react-move'
+import { NodeGroup, Animate } from 'react-move'
 import { withContext, getContext } from 'recompose'
 import PropTypes from 'prop-types'
 import { hot } from 'react-hot-loader'
@@ -114,16 +114,79 @@ const AnimatedRoutes = getContext({
   />
 ))
 
+class NavUnderline extends React.Component {
+  state = {
+    show: true
+  }
+
+  // updateShow = () => {
+  //   this.setState((prev) => ({ show: !prev.show }));
+  // }
+
+  render() {
+    const { state: { show } } = this;
+
+    return (
+      <div>
+        <Animate
+          show={show}
+
+          start={{
+            opacity: 0,
+          }}
+
+          enter={{
+            opacity: [1],
+            timing: { duration: 1000 },
+          }}
+
+          update={{
+            opacity: [1],
+            timing: { duration: 500 },
+          }}
+
+          leave={[
+            {
+              timing: { duration: 500 },
+            },
+            {
+              opacity: [0],
+              timing: { delay: 500, duration: 500 },
+            },
+          ]}
+        >
+          {({  }) => {
+            return (
+              <div style={{
+                width: 100,
+                height: 4,
+                position: 'absolute',
+                top: '45px',
+                right: '0px',
+                backgroundColor: '#cf000f',
+              }}
+              >
+
+              </div>
+            );
+          }}
+        </Animate>
+      </div>
+    );
+  }
+}
+
+
 const App = () => (
   <Router>
       <div className="app-container">
         <nav className="header">
-          <Link to="/" exact className="header-link" activeClassName="header-link-active"><img src={logoImage} alt="" className="header-logo"/></Link>
+          <Link to="/" exact activeClassName="header-link-active" activeClassName="header-link-active"><img src={logoImage} alt="" className="header-logo"/></Link>
           <div className="header-links">
-            <Link to="/about" className = "header-link" activeClassName = "header-link-active"><span className='header-link-text'>ABOUT</span></Link>
-            <Link to="/portfolio" className = "header-link" activeClassName = "header-link-active"><span className='header-link-text'>PORTFOLIO</span></Link>
-            <Link to="/resume" className = "header-link" activeClassName = "header-link-active"><span className='header-link-text'>RESUME</span></Link>
-            <Link to="/contact" className = "header-link" activeClassName = "header-link-active"><span className='header-link-text'>CONTACT</span></Link>
+            <Link to="/about" className = "header-link"  activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>ABOUT</span></Link>
+            <Link to="/portfolio" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>PORTFOLIO</span></Link>
+            <Link to="/resume" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>RESUME</span></Link>
+            <Link to="/contact" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>CONTACT</span></Link>
           </div>
         </nav>
         <Particles

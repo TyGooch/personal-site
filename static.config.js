@@ -12,27 +12,27 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/containers/Home/Home',
+        component: 'src/components/Home/Home',
       },
       {
         path: '/about',
-        component: 'src/containers/About/About',
+        component: 'src/components/About/About',
       },
       {
         path: '/portfolio',
-        component: 'src/containers/Portfolio/Portfolio',
+        component: 'src/components/Portfolio/Portfolio',
       },
       {
         path: '/resume',
-        component: 'src/containers/Resume/Resume',
+        component: 'src/components/Resume/Resume',
       },
       {
         path: '/contact',
-        component: 'src/containers/Contact/Contact',
+        component: 'src/components/Contact/Contact',
       },
       {
         is404: true,
-        component: 'src/containers/404/404',
+        component: 'src/components/404/404',
       },
     ]
   },
