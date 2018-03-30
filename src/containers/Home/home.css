@@ -92,3 +92,24 @@
   width: 50%;
   /* height: 100vh; */
 }
+
+/* .particles {
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: -5s;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    display: none;
+    opacity: 0;
+  }
+
+  to {
+    display: inherit;
+    opacity: 1;
+  }
+} */

@@ -1,107 +1,17 @@
 import React from 'react'
 import { Router, Route, Link, cleanPath } from 'react-static'
-import { easeQuadOut } from 'd3-ease'
+import { easeQuadOut, easeElasticIn, easeElasticOut, easeExpOut } from 'd3-ease'
 import { NodeGroup } from 'react-move'
 import { withContext, getContext } from 'recompose'
 import PropTypes from 'prop-types'
 import { hot } from 'react-hot-loader'
 import styled, { injectGlobal } from 'styled-components'
+import Particles from 'react-particles-js';
 
 import Routes from 'react-static-routes'
 
 import logoImage from './assets/personalLogoTrimmed.svg'
 import './app.css'
-// import './containers/Home/home.css'
-// import './containers/Resume/resume.css'
-
-// injectGlobal`
-//   body {
-//     font-family: 'Poppins', sans-serif;
-//     font-weight: 300;
-//     font-size: 16px;
-//     margin: 0px;
-//     padding: 0px;
-//     color: black;
-//     height: 100vh;
-//     width: 100vw;
-//   }
-//
-//   h1 {
-//     padding: 0px;
-//     margin: 0px;
-//   }
-//
-//   a {
-//     text-decoration: none;
-//     color: black;
-//   }
-//
-//   img {
-//     max-width: 100%;
-//   }
-// `
-//
-// const AppStyles = styled.div`
-//   .app-container {
-//     height: 100vh;
-//     width: 100%;
-//   }
-//
-//   .header {
-//     width: 100%;
-//     height: 50px;
-//     padding: 0px;
-//     margin: 0px;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     /* position: relative; */
-//     /* top: 0px; */
-//   }
-//
-//   .header-logo {
-//     height: 45px;
-//     max-width: 25vw;
-//     margin-top: 6px;
-//     padding-left: 10px;
-//   }
-//
-//   .header-links {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     max-width: 55vw;
-//     padding-right: 15px;
-//   }
-//
-//   .header-link {
-//     position: relative;
-//     font-weight: 400;
-//     font-size: 14px;
-//     line-height: 75px;
-//     color: black;
-//     margin-left: 0.5em;
-//     margin-right: 0.5em;
-//     padding-bottom: 0px;
-//   }
-//
-//   .header-link-text {
-//   }
-//
-//   .header-selected {
-//     color: red;
-//   }
-//
-//   .content {
-//     padding: 0px;
-//     margin: 0px;
-//     margin-top: 25px;
-//     height: calc(100% - 75px);
-//     min-width: 400px;
-//     width: 100vw;
-//     overflow: scroll;
-//   }
-// `
 
 // The magic :)
 const AnimatedRoutes = getContext({
@@ -148,20 +58,20 @@ const AnimatedRoutes = getContext({
           start={() => ({
             opacity: [0],
             scale: 1,
-            translateY: [10],
+            translateY: ['100%'],
           })}
           enter={() => ({
             opacity: [1],
-            translateY: [0],
-            timing: { duration: 200, delay: 200, ease: easeQuadOut },
+            translateY: ['0%'],
+            timing: { duration: 750, delay: 750 },
           })}
           update={() => ({
             opacity: [1],
           })}
           leave={() => ({
             opacity: [0],
-            translateY: [-10],
-            timing: { duration: 200, ease: easeQuadOut },
+            translateY: ['100%'],
+            timing: { duration: 750 },
           })}
         >
           {nodes => (
@@ -187,7 +97,7 @@ const AnimatedRoutes = getContext({
                       right: 0,
                       bottom: 0,
                       left: 0,
-                      transform: `translateY(${translateY}px)`,
+                      transform: `translateY(${translateY})`,
                       opacity,
                       height: '100%'
                     }}
@@ -208,14 +118,30 @@ const App = () => (
   <Router>
       <div className="app-container">
         <nav className="header">
-          <Link to="/"><img src={logoImage} alt="" className="header-logo"/></Link>
+          <Link to="/" exact className="header-link" activeClassName="header-link-active"><img src={logoImage} alt="" className="header-logo"/></Link>
           <div className="header-links">
-            <Link to="/about" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>ABOUT</span></Link>
-            <Link to="/portfolio" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>PORTFOLIO</span></Link>
-            <Link to="/resume" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>RESUME</span></Link>
-            <Link to="/contact" className = "header-link" activeStyle={{borderBottom: "4px solid #cf000f"}}><span className='header-link-text'>CONTACT</span></Link>
+            <Link to="/about" className = "header-link" activeClassName = "header-link-active"><span className='header-link-text'>ABOUT</span></Link>
+            <Link to="/portfolio" className = "header-link" activeClassName = "header-link-active"><span className='header-link-text'>PORTFOLIO</span></Link>
+            <Link to="/resume" className = "header-link" activeClassName = "header-link-active"><span className='header-link-text'>RESUME</span></Link>
+            <Link to="/contact" className = "header-link" activeClassName = "header-link-active"><span className='header-link-text'>CONTACT</span></Link>
           </div>
         </nav>
+        <Particles
+          className="particles"
+          style={
+            {
+              width: '100vmin',
+              height: '100%',
+              position: 'absolute',
+              top: '0px',
+              left: '0px',
+              zIndex: -1
+            }
+          }
+          params ={
+            { "fps_limit": 60, "particles": { "number": { "value":60, "density": { "enable": false, "value_area": 5000 } }, "color": { "value": "#2c2d33" }, "shape": { "type":"circle" }, "opacity": { "value":0.66, "random":false, }, "size": { "value":2, "random":true }, "line_linked": { "enable": true, "distance": 224, "color": "#2c2d33", "opacity": 0.26, "width": 0.32 }, "move": { "enable":true, "speed":0.5, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize":true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } } , "retina_detect":true }
+          }
+          />
         <div className="content">
           <Routes component={AnimatedRoutes} />
         </div>

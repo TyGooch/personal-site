@@ -51,7 +51,7 @@ nav a {
   height: 45px;
   max-width: 25vw;
   margin-top: 6px;
-  padding-left: 10px;
+  /* margin-left: 10px; */
 }
 
 .header-links {
@@ -76,8 +76,72 @@ nav a {
 .header-link-text {
 }
 
-.header-selected {
-  color: red;
+.header-link:after{
+  content: "";
+  display: block;
+  /* color: white; */
+  position: relative;
+  z-index: -1;
+  top: calc(-100% + 20px);
+  /* right: 100%; */
+  /* width: inherit; */
+  height: 4px;
+  background-color: none;
+  background-color: #cf000f;
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  /* border-bottom: 4px solid #cf000f; */
+  animation-duration: 750ms;
+  animation-timing-function: ease-out;
+  animation-name: fadeOut;
+  /* animation-direction: reverse; */
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.header-link-active:after{
+  content: "";
+  display: block;
+  /* color: white; */
+  position: relative;
+  z-index: -1;
+  top: calc(-100% + 20px);
+  /* right: 100%; */
+  /* width: inherit; */
+  height: 4px;
+  background-color: #cf000f;
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  /* border-bottom: 4px solid #cf000f; */
+  animation-duration: 750ms;
+  animation-timing-function: ease-in;
+  animation-delay: 750ms;
+  animation-fill-mode: backwards;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    width: 0px;
+    left: 50%;
+  }
+
+  to {
+    left: 0px;
+    width: 100%;
+  }
+}
+@keyframes fadeOut {
+  from {
+    width: 100%;
+    left: 0px;
+  }
+
+  to {
+    left: 50%;
+    width: 0px;
+  }
 }
 
 .content {
