@@ -131,7 +131,7 @@ nav a {
   font-size: 24px;
   font-weight: 400;
   text-align: center;
-  background-color: #cf000f;
+  background-color: #CF000F;
   color: white;
   padding-left: 15px;
   padding-right: 15px;
@@ -225,7 +225,7 @@ li {
   display: inline-block;
   margin-left: -0.75em;
   width: 0.75em;
-  color: #cf000f;
+  color: #CF000F;
   font-weight: 500;
 }
 
@@ -261,7 +261,7 @@ li {
 
 
 .resume-header{
-  border-bottom: 2px solid #cf000f;
+  border-bottom: 2px solid #CF000F;
   margin: 0px;
   padding: 0px;
   margin-left: 3%;
@@ -274,7 +274,7 @@ li {
 }
 
 .resume-contact-info {
-  border-bottom: 2px solid #cf000f;
+  border-bottom: 2px solid #CF000F;
   display: flex;
   flex-direction: row;
   padding: 3px;
@@ -318,7 +318,7 @@ li {
 }
 
 .body-header {
-  border-bottom: 2px solid #cf000f;
+  border-bottom: 2px solid #CF000F;
   font-size: 1.25em;
   line-height: 16px;
   font-weight: 600;
@@ -331,11 +331,11 @@ li {
   bottom: 6px;
   padding: 0px;
   margin: 0px;
-  border-right: 2px solid #cf000f;
+  border-right: 2px solid #CF000F;
 }
 .resume-footer {
-  border-bottom: 2px solid #cf000f;
-  border-top: 2px solid #cf000f;
+  border-bottom: 2px solid #CF000F;
+  border-top: 2px solid #CF000F;
   display: flex;
   flex-direction: row;
   padding: 3px;

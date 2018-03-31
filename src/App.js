@@ -10,7 +10,8 @@ import Particles from 'react-particles-js';
 
 import Routes from 'react-static-routes'
 
-import logoImage from './assets/personalLogoTrimmed.svg'
+// import logoImage from './assets/personalLogoNew.svg'
+import logoImage from './assets/logo.svg'
 import './app.css'
 
 // The magic :)
@@ -63,7 +64,7 @@ const AnimatedRoutes = getContext({
           enter={() => ({
             opacity: [1],
             translateY: ['0%'],
-            timing: { duration: 750, delay: 750 },
+            timing: { duration: 325, delay: 325 },
           })}
           update={() => ({
             opacity: [1],
@@ -71,7 +72,7 @@ const AnimatedRoutes = getContext({
           leave={() => ({
             opacity: [0],
             translateY: ['100%'],
-            timing: { duration: 750 },
+            timing: { duration: 325 },
           })}
         >
           {nodes => (
@@ -119,18 +120,18 @@ const App = () => (
   <Router>
       <div className="app-container">
         <nav className="header">
-          <Link to="/" exact activeClassName="header-link-active" activeClassName="header-link-active"><img src={logoImage} alt="" className="header-logo"/></Link>
-          <div className="header-links">
+          <Link to="/" exact activeClassName="header-logo-active" className="header-logo"><img src={logoImage} alt="" /></Link>
+          <nav className="header-links">
             <Prefetch path='/about'><Link to="/about" className = "header-link"  activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>ABOUT</span></Link></Prefetch>
             <Prefetch path='/portfolio'><Link to="/portfolio" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>PORTFOLIO</span></Link></Prefetch>
             <Prefetch path='/resume'><Link to="/resume" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>RESUME</span></Link></Prefetch>
             <Prefetch path='/contact'><Link to="/contact" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>CONTACT</span></Link></Prefetch>
-          </div>
-          <div className="social-links">
+          </nav>
+          <nav className="social-links">
             <a href='https://github.com/tygooch' className='social-link'><i className='fab fa-github'></i></a>
             <a href='https://linkedin.com/in/tygooch' className='social-link'><i className='fab fa-linkedin-in'></i></a>
             <a href='https://facebook.com/tybradleygooch' className='social-link'><i className='fab fa-facebook-f'></i></a>
-          </div>
+          </nav>
         </nav>
         <Particles
           className="particles"
@@ -142,11 +143,11 @@ const App = () => (
               top: '0px',
               left: '0px',
               zIndex: -1,
-              opacity: 0.8
+              opacity: 1
             }
           }
           params ={
-            { "fps_limit": 60, "particles": { "number": { "value":60, "density": { "enable": false, "value_area": 5000 } }, "color": { "value": "#2c2d33" }, "shape": { "type":"circle" }, "opacity": { "value":0.66, "random":false, }, "size": { "value":2, "random":true }, "line_linked": { "enable": true, "distance": 224, "color": "#2c2d33", "opacity": 0.26, "width": 0.32 }, "move": { "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize":true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } } , "retina_detect":true }
+            { "fps_limit": 60, "particles": { "number": { "value":60, "density": { "enable": false, "value_area": 5000 } }, "color": { "value": "#000000" }, "shape": { "type":"circle" }, "opacity": { "value":1, "random":false, }, "size": { "value":2, "random":true }, "line_linked": { "enable": true, "distance": 224, "color": "#000000", "opacity": 0.75, "width": 0.32 }, "move": { "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize":true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } } , "retina_detect":true }
           }
           />
         <div className="content">

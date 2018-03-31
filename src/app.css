@@ -5,6 +5,7 @@ body {
   margin: 0px;
   padding: 0px;
   color: black;
+  background-color: white;
   height: 100vh;
   width: 100vw;
 }
@@ -48,19 +49,28 @@ nav a {
   /* background: green; */
 }
 
-.header-logo {
-  height: 45px;
+.header-logo img{
+  height: 50px;
   max-width: 25vw;
-  margin-top: 7.5px;
+  margin-top: 5px;
   margin-left: 15px;
+}
+
+.header-logo:hover {
+  opacity: 0.5;
+}
+
+.header-logo-active:hover {
+  opacity: 1;
+  cursor: default;
 }
 
 .header-links {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: calc(27.5px);
-  /* padding-right: 15px; */
+  padding-right: 15px;
   position: relative;
   bottom: 0px;
   height: 1em;
@@ -69,18 +79,27 @@ nav a {
 .header-link {
   position: relative;
   bottom: 0px;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1em;
   line-height: 1em;
   color: black;
-  margin-left: 1em;
-  margin-right: 1em;
+  /* margin-left: 1em; */
+  /* margin-right: 2em; */
   padding-bottom: 0px;
 }
 
+.header-link:hover {
+  opacity: 0.5;
+}
+
+.header-link:not(:last-child){
+  margin-right: 2.5em;
+}
+
 .header-link.active {
-  color: #cf000f;
-  transition: color 1.5s linear;
+  color: #CF000F;
+  transition: color 0.75s linear;
+  font-weight: 500;
 }
 
 .header-link.active:hover {
@@ -92,15 +111,15 @@ nav a {
   content: "";
   position: absolute;
   width: 100%;
-  height: 4px;
-  bottom: -4px;
+  height: 2px;
+  bottom: -2px;
   left: 0;
-  background-color: #000000;
+  background-color: black;
   visibility: hidden;
   /* -webkit-transform: scaleX(0); */
   transform: scaleX(0) ;
-  -webkit-transition: all 0.75s ease-in-out 0s;
-  transition: all 0.75s ease-in-out 0s;
+  -webkit-transition: all 0.325s ease-in-out 0s;
+  transition: all 0.325s ease-in-out 0s;
 }
 
 .header-link.active:after {
@@ -108,7 +127,7 @@ nav a {
   width: 100%;
   /* -webkit-transform: scaleX(1); */
   transform: scaleX(1) ;
-  transition: all 0.75s ease-in-out 0.75s;
+  transition: all 0.325s ease-in-out 0.325s;
 }
 
 .social-links {
@@ -128,7 +147,7 @@ nav a {
   font-weight: 500;
   font-size: 1.25em;
   line-height: 1.25em;
-  color: #000000;
+  color: black;
   /* margin-left: 1em; */
   margin-right: 1em;
   padding-bottom: 0px;

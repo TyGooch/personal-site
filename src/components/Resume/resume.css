@@ -13,18 +13,26 @@
   width: inherit;
   /* box-sizing: content-box; */
   /* min-width: 375px; */
+  color: black;
+  background-color: white;
+  max-width: 579px;
+  min-width: 350px;
+  margin-bottom: 25px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(0,0,0,0.25);
+  box-shadow: -3px 5px 13px -3px rgba(0,0,0,0.75);
 }
 
 .resume-container {
   align-self: center;
-  float:right;
+  /* float:right; */
   margin-right: 10px;
   margin-left: 10px;
-  min-width: 350px;
-  max-width: 579px;
+  /* max-width: 579px; */
   /* width: 100%; */
-  height: calc(100% - 10px);
-  max-height: 700px;
+  /* height: calc(100% - 10px); */
+  /* height: 100%; */
+  /* max-height: 700px; */
   overflow: scroll;
   /* margin: 0px; */
   /* padding: 0px; */
@@ -34,10 +42,7 @@
   flex-direction: row;
   justify-content: center;
   /* background: red; */
-  border: 1px solid rgba(0,0,0,0.25);
   /* box-shadow: -10px 10px 13px -10px rgba(0,0,0,0.75); */
-  box-shadow: -3px 5px 13px -3px rgba(0,0,0,0.75);
-  background-color: white;
 }
 
 h1 {
@@ -69,7 +74,7 @@ li {
   display: inline-block;
   margin-left: -0.75em;
   width: 0.75em;
-  color: #cf000f;
+  color: #CF000F;
   font-weight: 500;
 }
 
@@ -109,7 +114,7 @@ li {
 
 
 .resume-header{
-  border-bottom: 2px solid #cf000f;
+  border-bottom: 2px solid #CF000F;
   margin: 0px;
   padding: 0px;
   /* padding-bottom: 3px; */
@@ -124,7 +129,7 @@ li {
 }
 
 .resume-contact-info {
-  border-bottom: 2px solid #cf000f;
+  border-bottom: 2px solid #CF000F;
   display: flex;
   flex-direction: row;
   padding: 3px;
@@ -190,7 +195,7 @@ li {
 }
 
 .body-header {
-  border-bottom: 2px solid #cf000f;
+  border-bottom: 2px solid #CF000F;
   font-size: 1.25em;
   line-height: 16px;
   font-weight: 600;
@@ -204,11 +209,11 @@ li {
   bottom: 6px;
   padding: 0px;
   margin: 0px;
-  border-right: 2px solid #cf000f;
+  border-right: 2px solid #CF000F;
 }
 .resume-footer {
-  border-bottom: 2px solid #cf000f;
-  border-top: 2px solid #cf000f;
+  border-bottom: 2px solid #CF000F;
+  border-top: 2px solid #CF000F;
   display: flex;
   flex-direction: row;
   padding: 3px;
