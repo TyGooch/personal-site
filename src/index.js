@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Particles from 'particlesjs'
 
 // Your top level component
 import App from './App'
@@ -17,3 +18,14 @@ if (typeof document !== 'undefined') {
   // Render!
   render(App)
 }
+
+// window.onload = () => {
+//   Particles.init({
+//     selector: '.background',
+//     maxParticles: 50,
+//     connectParticles: true,
+//     speed: 0.1,
+//     sizeVariations: 2,
+//     minDistance: 224
+//   })
+// }

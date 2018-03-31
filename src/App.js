@@ -14,6 +14,20 @@ import Routes from 'react-static-routes'
 import logoImage from './assets/logo.svg'
 import './app.css'
 
+// const particles = Particles.init({
+//   selector: 'canvas',
+//   color: ['#000000', '#000000'],
+//   connectParticles: true,
+//   responsive: [{
+//     breakpoint: 400,
+//     options: {
+//       color: '#00C9B1',
+//       maxParticles: 80,
+//       connectParticles: true
+//     }
+//   }]
+// }).bind(window, document)
+
 // The magic :)
 const AnimatedRoutes = getContext({
   // We have to preserve the router context for each route
@@ -126,18 +140,22 @@ const App = () => (
             <Prefetch path='/portfolio'><Link to="/portfolio" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>PORTFOLIO</span></Link></Prefetch>
             <Prefetch path='/resume'><Link to="/resume" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>RESUME</span></Link></Prefetch>
             <Prefetch path='/contact'><Link to="/contact" className = "header-link" activeStyle={{width: 'inherit', height: 'inherit'}} ><span className='header-link-text'>CONTACT</span></Link></Prefetch>
+            <button className='menu-icon'><i className='fas fa-bars'></i></button>
           </nav>
           <nav className="social-links">
-            <a href='https://github.com/tygooch' className='social-link'><i className='fab fa-github'></i></a>
-            <a href='https://linkedin.com/in/tygooch' className='social-link'><i className='fab fa-linkedin-in'></i></a>
-            <a href='https://facebook.com/tybradleygooch' className='social-link'><i className='fab fa-facebook-f'></i></a>
+            <div onClick={() => window.open('https://github.com/tygooch', '_blank')} className='social-link'><i className='fab fa-github'></i></div>
+            <div onClick={() => window.open('https://linkedin.com/in/tygooch', '_blank')} className='social-link'><i className='fab fa-linkedin-in'></i></div>
+            <div onClick={() => window.open('https://facebook.com/tybradleygooch', '_blank')} className='social-link'><i className='fab fa-facebook-f'></i></div>
           </nav>
         </nav>
         <Particles
           className="particles"
+          canvasClassName="particles-canvas"
+          width='100vw'
+          height='100vh'
           style={
             {
-              width: '100vmin',
+              width: '100vw',
               height: '100vh',
               position: 'fixed',
               top: '0px',
@@ -147,7 +165,7 @@ const App = () => (
             }
           }
           params ={
-            { "fps_limit": 60, "particles": { "number": { "value":60, "density": { "enable": false, "value_area": 5000 } }, "color": { "value": "#000000" }, "shape": { "type":"circle" }, "opacity": { "value":1, "random":false, }, "size": { "value":2, "random":true }, "line_linked": { "enable": true, "distance": 224, "color": "#000000", "opacity": 0.75, "width": 0.32 }, "move": { "enable":true, "speed":1, "direction":"none", "random":true, "straight":false, "out_mode":"out", "bounce":false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize":true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } } , "retina_detect":true }
+            { "fps_limit": 60, "particles": { "number": { "value":((window.innerWidth/400)*30), "density": { "enable": false, "value_area": 400 } }, "color": { "value": "#000000" }, "shape": { "type":"circle" }, "opacity": { "value":0.5, "random":false, }, "size": { "value":1, "random":false }, "line_linked": { "enable": true, "distance": 224, "color": "#000000", "opacity": 0.5, "width": 0.32 }, "move": { "enable":true, "speed":0.75, "direction":"none", "random":true, "straight":false, "out_mode":"bounce", "bounce":true, "attract": { "enable": false, "rotateX": -100, "rotateY": -100 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize":false }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } } , "retina_detect":true }
           }
           />
         <div className="content">
