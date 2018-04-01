@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
+  /usr/local/Cellar/node/9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js build
 
 PATH: 
   /Users/tygooch/.rvm/gems/ruby-2.4.0/bin:/Users/tygooch/.rvm/gems/ruby-2.4.0@global/bin:/Users/tygooch/.rvm/rubies/ruby-2.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/tygooch/.rvm/bin:/usr/local/mongodb/bin
@@ -31,7 +31,9 @@ npm manifest:
       "particlesjs": "^2.2.2",
       "react": "^16.0.0",
       "react-bootstrap": "^0.32.1",
+      "react-collapse": "^4.0.3",
       "react-dom": "^16.0.0",
+      "react-motion": "^0.5.2",
       "react-move": "^2.6.0",
       "react-particles-js": "^2.1.1",
       "react-router": "^4.2.0",
@@ -6037,7 +6039,7 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
   
-  raf@^3.4.0:
+  raf@^3.1.0, raf@^3.4.0:
     version "3.4.0"
     resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.0.tgz#a28876881b4bc2ca9117d4138163ddb80f781575"
     dependencies:
@@ -6106,6 +6108,12 @@ Lockfile:
       uncontrollable "^4.1.0"
       warning "^3.0.0"
   
+  react-collapse@^4.0.3:
+    version "4.0.3"
+    resolved "https://registry.yarnpkg.com/react-collapse/-/react-collapse-4.0.3.tgz#b96de959ed0092a43534630b599a4753dd76d543"
+    dependencies:
+      prop-types "^15.5.8"
+  
   react-dev-utils@^4.0.1:
     version "4.2.1"
     resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.1.tgz#9f2763e7bafa1a1b9c52254d2a479deec280f111"
@@ -6160,6 +6168,14 @@ Lockfile:
       hoist-non-react-statics "^2.5.0"
       prop-types "^15.6.0"
       shallowequal "^1.0.2"
+  
+  react-motion@^0.5.2:
+    version "0.5.2"
+    resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.5.2.tgz#0dd3a69e411316567927917c6626551ba0607316"
+    dependencies:
+      performance-now "^0.2.0"
+      prop-types "^15.5.8"
+      raf "^3.1.0"
   
   react-move@^2.6.0:
     version "2.7.0"
@@ -8038,7 +8054,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c react-static start
+  Arguments: -c react-static build
   Directory: /Users/tygooch/Documents/Projects/personal-site/personal-site
   Output:
   

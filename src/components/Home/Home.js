@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link, withSiteData } from 'react-static'
-import Particles from 'react-particles-js';
-import { Animate } from 'react-move'
 
 import './home.css'
 
 export default withSiteData(() => (
     <div className="home-container">
-
 
       <div className="home-text-container">
         <h1 style={{ textAlign: 'center' }}>DEVELOPER</h1>

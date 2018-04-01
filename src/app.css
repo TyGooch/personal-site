@@ -115,13 +115,12 @@ nav a {
   color: black;
   /* margin-left: 1em; */
   /* margin-right: 2em; */
-  padding-bottom: 1px;
+  /* padding-bottom: 1px; */
 }
 
 .header-link:hover {
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
-
 /* .header-link:not(:last-child){
   margin-right: 2.5em;
 } */
@@ -129,7 +128,6 @@ nav a {
 .header-link.active {
   color: #CF000F;
   transition: color 0.75s linear;
-  font-weight: 500;
 }
 
 .header-link.active:hover {
@@ -147,7 +145,21 @@ nav a {
   left: 0;
   background-color: black;
   visibility: hidden;
-  /* -webkit-transform: scaleX(0); */
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.325s ease-in-out 0s;
+  transition: all 0.325s ease-in-out 0s;
+}
+.header-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -8px;
+  left: 0;
+  background-color: #cf000f;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transition: all 0.325s ease-in-out 0s;
   transition: all 0.325s ease-in-out 0s;
@@ -159,6 +171,17 @@ nav a {
   -webkit-transform: scaleX(1);
   transform: scaleX(1) ;
   transition: all 0.325s ease-in-out 0.325s;
+  background-color: black;
+}
+
+.header-link:hover:before {
+  visibility: visible;
+  transform: scaleX(1) ;
+  /* transition: all 0.325s ease-in-out 0s; */
+}
+.header-link.active:before {
+  visibility: visible;
+  transform: scaleX(1) ;
 }
 
 .social-links {

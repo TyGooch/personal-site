@@ -43,23 +43,6 @@ export default {
   //   return html
   // },
   Document: class CustomHtml extends Component {
-    componentDidMount(){
-      {
-        Particles.init({
-          selector: '.background',
-          color: ['#000000', '#000000'],
-          connectParticles: true,
-          responsive: [{
-            breakpoint: 400,
-            options: {
-              color: '#00C9B1',
-              maxParticles: 80,
-              connectParticles: false
-            }
-          }]
-        })
-      }
-    }
     render () {
       const {
         Html, Head, Body, children, renderMeta,
@@ -76,7 +59,6 @@ export default {
             {renderMeta.styleTags}
           </Head>
           <Body>{children}</Body>
-          <canvas className="background"></canvas>
         </Html>
       )
     }
