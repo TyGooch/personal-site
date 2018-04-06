@@ -7,7 +7,7 @@ export default withSiteData(() => (
     <div className="home-container">
 
       <div className="home-text-container">
-        <h1 style={{ textAlign: 'center' }}>DEVELOPER</h1>
+        <h1 style={{ textAlign: 'center', padding: '0px', margin: '0px'}}>DEVELOPER</h1>
         <span className="home-text-container-location">SANTA BARBARA, CA</span>
         <div className="home-links">
           <div className="home-link" >
