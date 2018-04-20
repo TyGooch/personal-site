@@ -1,7 +1,7 @@
 
 
 .home-container {
-  height: calc(100vh - 66px);
+  height: inherit;
   /* padding-top: 15px; */
   width: 100%;
   justify-content: center;

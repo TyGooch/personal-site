@@ -13,14 +13,14 @@ export default withSiteData(() => (
       WHAT I MAKE
     </div>
 
-    <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '100%', textAlign: 'center'} : null : null}>
-      <img id='iv-emergency-dispatch-image' src={ucsbMapMacImage} style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '350px', textAlign: 'center'} : {width:'600px'} : null} />
+    <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '100%', textAlign: 'center'} : {float: 'right'} : null}>
+      <img id='portfolio-image' src={ucsbMapMacImage} style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '350px', textAlign: 'center'} : {width:'600px'} : null} />
     </div>
     <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '100%', textAlign: 'center'} : null : null}>
-      <img id='iv-emergency-dispatch-image' src={ucsbMapIphoneImage} style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '350px', textAlign: 'center'} : null : null} />
+      <img id='portfolio-image' src={ucsbMapIphoneImage} style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '350px', textAlign: 'center'} : null : null} />
     </div>
     <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '100%', textAlign: 'center'} : null : null}>
-      <img id='iv-emergency-dispatch-image' src={ivEmergencyDispatchImage} style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '350px', textAlign: 'center'} : {width:'600px'} : null} />
+      <img id='portfolio-image' src={ivEmergencyDispatchImage} style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '350px', textAlign: 'center'} : {width:'600px'} : null} />
     </div>
 
   </div>
