@@ -1,0 +1,124 @@
+.about-container {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.about-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.about-section-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.about-section-content {
+  display: block;
+  /* flex-direction: column; */
+  width: 85%;
+  max-width: 800px;
+  /* padding: 15px; */
+}
+
+.about-section-header-container {
+  color: #cf000f;
+  font-weight: 800;
+  /* font-size: 26px; */
+  float: left;
+  padding-right: 10px;
+  /* text-align: right; */
+  /* width: 180px; */
+  /* padding-left: 10px; */
+  /* border-bottom: 3px solid black; */
+}
+
+.about-section-header-text {
+  /* float: right; */
+}
+
+.about-section-text {
+  float: right;
+  width: 600px;
+  /* background: rgba(255,255,255,0.5); */
+  /* border: 1px solid #eee; */
+  /* box-shadow: -3px 5px 13px -3px rgba(0,0,0,0.75); */
+  font-weight: 300;
+  /* color: rgba(0,0,0,0.85); */
+  /* padding: 10px; */
+  /* padding-bottom: 10px; */
+  /* border-bottom: 3px solid black; */
+}
+
+.about-section-text span {
+  background: rgba(255,255,255,0.5);
+}
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  max-width: inherit;
+  /* column-count: 2; */
+}
+
+.skills-column {
+  /* margin-right: 75px; */
+  font-weight: 300;
+  width: 150px;
+}
+
+.skills-list span {
+  background: rgba(255,255,255,0.5);
+}
+
+.skills-header {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.about-contact-link {
+  text-align: center;
+  opacity: 1;
+  height: 100%;
+  font-weight: 300;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: inherit;
+  margin-left: 5px;
+  /* background-color: #CF000F; */
+  /* width: 50%; */
+}
+
+.about-contact-link:hover {
+  opacity: 0.75;
+}
+
+.about-contact-link-text {
+  display: inline-block;
+  font-size: inherit;
+  /* line-height: 100%; */
+  height: 100%;
+  /* width: 120px; */
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  opacity: 1;
+  /* border: 3px solid #CF000F; */
+}
