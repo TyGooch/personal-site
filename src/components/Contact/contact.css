@@ -1,4 +1,5 @@
-.portfolio-container {
+.contact-container {
+  padding-top: 15px;
   width: 100%;
   justify-content: center;
   display: flex;
@@ -7,8 +8,7 @@
   font-size: 18px;
 }
 
-.portfolio-header {
-  margin-top: 15px;
+.contact-header {
   text-align: center;
   font-weight: 600;
   font-size: 50px;
@@ -16,17 +16,13 @@
   /* line-height: 60px; */
 }
 
-.portfolio-header::before {
+.contact-header::before {
   content: '– ';
   font-family: Poppins;
   color: #cf000f;
 }
-.portfolio-header::after {
+.contact-header::after {
   content: ' –';
   font-family: Poppins;
   color: #cf000f;
-}
-
-#iv-emergency-dispatch-image {
-  width: 500px;
 }

@@ -1,5 +1,5 @@
 .about-container {
-  margin-top: 10px;
+  padding-top: 15px;
   width: 100%;
   justify-content: center;
   display: flex;
@@ -12,6 +12,25 @@
   text-align: center;
   font-weight: 600;
   font-size: 50px;
+}
+
+.about-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 50px;
+  vertical-align: middle;
+  /* line-height: 60px; */
+}
+
+.about-header::before {
+  content: '– ';
+  font-family: Poppins;
+  color: #cf000f;
+}
+.about-header::after {
+  content: ' –';
+  font-family: Poppins;
+  color: #cf000f;
 }
 
 .about-section-container {

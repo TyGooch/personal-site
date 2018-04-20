@@ -6,7 +6,7 @@ import './about.css'
 export default () => (
   <div className='about-container'>
     <div className='about-header' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {fontSize: '30px', paddingTop: '0px'} : null : null}>
-      <span style={{color: '#cf000f'}}>- </span>ABOUT MYSELF<span style={{color: '#cf000f'}}> -</span>
+      WHAT I DO
     </div>
 
     <div className='about-section-container'>

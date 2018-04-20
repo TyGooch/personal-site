@@ -1,13 +1,13 @@
 import React from 'react'
 import { withSiteData, Link } from 'react-static'
 
+import './contact.css'
+
 
 export default withSiteData(() => (
-    <div className="home-container">
-      <div className="home-text-container">
-        <h1 style={{ textAlign: 'center' }}>DEVELOPER</h1>
-        <span style={{fontWeight: 200, textAlign: 'center'}}>SANTA BARBARA, CA</span>
-        <Link to="/about" className="portfolio-link">VIEW PORTFOLIO</Link>
-      </div>
+  <div className='contact-container'>
+    <div className='contact-header' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {fontSize: '30px', paddingTop: '0px'} : null : null}>
+      HOW TO REACH ME
     </div>
+  </div>
 ))

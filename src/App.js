@@ -162,9 +162,9 @@ class App extends React.Component{
               style={
                 {
                   width: '100vw',
-                  height: '100vh',
+                  height: this.state.isMobile ? 'calc(100% - 87px)' : 'calc(100% - 66px)',
                   position: 'fixed',
-                  top: '0px',
+                  top: this.state.isMobile ? '87px' : '66px',
                   left: '0px',
                   zIndex: -1,
                   opacity: 1
@@ -179,8 +179,8 @@ class App extends React.Component{
               <Routes component={AnimatedRoutes} />
             </div>
 
-            <div class="scroll-fade-top" style={this.state.isMobile ? {top: '86px'} : null}></div>
-            <div class="scroll-fade-bottom"></div>
+            <div className="scroll-fade-top" style={this.state.isMobile ? {top: '86px'} : null}></div>
+            <div className="scroll-fade-bottom"></div>
 
           </div>
       </Router>
