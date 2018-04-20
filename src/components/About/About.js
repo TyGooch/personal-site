@@ -5,14 +5,14 @@ import './about.css'
 
 export default () => (
   <div className='about-container'>
-    <div className='about-header'>
-      Hey, I'm Ty
+    <div className='about-header' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {fontSize: '30px', paddingTop: '0px'} : null : null}>
+      <span style={{color: '#cf000f'}}>- </span>ABOUT MYSELF<span style={{color: '#cf000f'}}> -</span>
     </div>
 
     <div className='about-section-container'>
       <div className='about-section-content'>
         <div className='about-section-header-container' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? null : {width: '170px'} : null}>
-          <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {float: 'left', marginBottom: '10px'} : {float: 'right'} : null}>
+          <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {float: 'left', marginBottom: '5px'} : {float: 'right'} : null}>
             BACKGROUND
           </div>
         </div>
@@ -43,7 +43,7 @@ export default () => (
     <div className='about-section-container'>
       <div className='about-section-content'>
         <div className='about-section-header-container' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? null : {width: '170px'} : null}>
-          <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {float: 'left', marginBottom: '10px'} : {float: 'right'} : null}>
+          <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {float: 'left', marginBottom: '5px'} : {float: 'right'} : null}>
             SKILLS
           </div>
         </div>

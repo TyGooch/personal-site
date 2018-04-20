@@ -153,6 +153,7 @@ class App extends React.Component{
                 </nav>
               </div>
             </nav>
+
             <Particles
               className="particles"
               canvasClassName="particles-canvas"
@@ -173,9 +174,14 @@ class App extends React.Component{
                 { "fps_limit": 60, "particles": { "number": { "value": (typeof window !== 'undefined') ? ((window.innerWidth/400)*30) : 60, "density": { "enable": false, "value_area": 400 } }, "color": { "value": "#000000" }, "shape": { "type":"circle" }, "opacity": { "value":0.5, "random":false, }, "size": { "value":1, "random":false }, "line_linked": { "enable": true, "distance": 224, "color": "#000000", "opacity": 0.5, "width": 0.32 }, "move": { "enable":true, "speed":0.75, "direction":"none", "random":true, "straight":false, "out_mode":"bounce", "bounce":true, "attract": { "enable": false, "rotateX": -100, "rotateY": -100 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize":false }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } } , "retina_detect":true }
               }
               />
-            <div className="content" style={this.state.isMobile ? {height: 'calc(100% - 100px)', top: '100px'} : null}>
+
+            <div className="content" style={this.state.isMobile ? {height: 'calc(100% - 87px)', top: '87px'} : null}>
               <Routes component={AnimatedRoutes} />
             </div>
+
+            <div class="scroll-fade-top" style={this.state.isMobile ? {top: '86px'} : null}></div>
+            <div class="scroll-fade-bottom"></div>
+
           </div>
       </Router>
     )

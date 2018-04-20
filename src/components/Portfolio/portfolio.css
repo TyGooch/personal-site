@@ -1,0 +1,19 @@
+.portfolio-container {
+  padding-top: 10px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.portfolio-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+#iv-emergency-dispatch-image {
+  width: 500px;
+}
