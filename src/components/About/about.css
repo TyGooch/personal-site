@@ -68,8 +68,12 @@
   display: flex;
   flex-wrap: wrap;
   /* flex-direction: column; */
-  /* justify-content: space-between; */
+  float: left;
+  justify-content: space-between;
+  /* justify-content: space-around; */
   max-width: inherit;
+  width: inherit;
+  /* background: green; */
   /* column-count: 2; */
 }
 

@@ -11,12 +11,12 @@ export default () => (
 
     <div className='about-section-container'>
       <div className='about-section-content'>
-        <div className='about-section-header-container' style={window.innerWidth < 950 ? null : {width: '170px'} }>
-          <div style={window.innerWidth < 950 ? {float: 'left'} : {float: 'right'} }>
+        <div className='about-section-header-container' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? null : {width: '170px'} : null}>
+          <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {float: 'left', marginBottom: '10px'} : {float: 'right'} : null}>
             BACKGROUND
           </div>
         </div>
-        <div className='about-section-text' style={window.innerWidth < 950 ? {width: '100%', fontSize: '16px', } : {} }>
+        <div className='about-section-text' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '100%', fontSize: '16px', } : {} : null}>
           <span>
             I’m a frontend software developer and 3rd year student at UC Santa
             Barbara set to graduate from the College of Engineering in 2019 with
@@ -42,12 +42,12 @@ export default () => (
 
     <div className='about-section-container'>
       <div className='about-section-content'>
-        <div className='about-section-header-container' style={window.innerWidth < 950 ? null : {width: '170px'} }>
-          <div style={window.innerWidth < 950 ? {float: 'left'} : {float: 'right'} }>
+        <div className='about-section-header-container' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? null : {width: '170px'} : null}>
+          <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {float: 'left', marginBottom: '10px'} : {float: 'right'} : null}>
             SKILLS
           </div>
         </div>
-        <div className='about-section-text' style={window.innerWidth < 950 ? {width: '100%', fontSize: '16px'} : null }>
+        <div className='about-section-text' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '100%', fontSize: '16px', justifyContent: 'center'} : null : null}>
           <ul className='skills-content'>
             <li className='skills-column'>
               <div className='skills-header'>LANGUAGES</div>
@@ -56,6 +56,8 @@ export default () => (
                 JavaScript (ES6)
                 <br/>
                 Ruby
+                <br/>
+                Java
                 <br/>
                 HTML
                 <br/>
@@ -81,10 +83,7 @@ export default () => (
               </div>
             </li>
 
-            {window.innerWidth < 950 ? <li></li> : null }
-            {window.innerWidth < 950 ? <li></li> : null }
-
-            <li className='skills-column' style={window.innerWidth < 950 ? {marginTop: '10px'} : null }>
+            <li className='skills-column' style={typeof window !== 'undefined' ? window.innerWidth < 530 ? {marginTop: '10px'} : null : null}>
               <div className='skills-header'>TOOLS</div>
               <div className='skills-list'>
                 <span>
@@ -97,12 +96,11 @@ export default () => (
                 Webpack
                 <br/>
                 Chrome DevTools
-                <br/>
                 </span>
               </div>
             </li>
 
-            <li className='skills-column' style={window.innerWidth < 950 ? {marginTop: '10px'} : null }>
+            <li className='skills-column' style={typeof window !== 'undefined' ? window.innerWidth < 646 ? {marginTop: '10px'} : {} : null}>
               <div className='skills-header'>Miscellaneous</div>
               <div className='skills-list'>
                 <span>
@@ -111,9 +109,6 @@ export default () => (
                 Sketch
                 <br/>
                 Mapbox Studio
-                <br/>
-
-                <br/>
                 </span>
               </div>
             </li>
