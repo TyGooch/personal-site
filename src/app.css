@@ -6,8 +6,8 @@ body {
   padding: 0px;
   color: black;
   background-color: white;
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh; */
+  /* width: 100vw; */
 }
 
 h1 {
@@ -25,7 +25,11 @@ img {
 }
 
 nav {
-
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background: white;
+  z-index: 10000000;
 }
 
 nav a {
@@ -34,18 +38,22 @@ nav a {
 .app-container {
   height: 100vh;
   width: 100%;
+  position: fixed;
+  overflow: scroll;
 }
 
 .header {
-  width: inherit;
+  width: 100%;
   height: 60px;
   padding: 0px;
   margin: 0px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: fixed;
   top: 0px;
+  padding-bottom: 7.5px;
+  background-color: white;
   /* background: green; */
 }
 
@@ -71,34 +79,38 @@ nav a {
   flex-direction: row;
   justify-content: space-between;
   /* margin-top: calc(27.5px); */
-  margin-top: 42px;
+  /* margin-top: 42px; */
   /* padding-right: 15px; */
-  position: relative;
+  position: fixed;
+  top: 42px;
   bottom: 0px;
   height: 1em;
   /* padding-left: 15px;
   padding-right: 15px; */
   /* width: 100%; */
-  /* width: calc(100% - 100px); */
+  /* width: calc(100% - 280px); */
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   width: calc(100% - 55vw);
   min-width: 400px;
+  text-align: center;
 }
 
 .header-links.mobile {
   position: absolute;
   justify-content: space-between;
-  top: 22.5px;
+  top: 64.5px;
   /* left: calc(15px); */
   width: calc(100vw - 30px);
   max-width: 600px;
   align-self: center;
   min-width: 300px;
   /* border-bottom: 1px solid #cf000f; */
-  padding-bottom: 5px;
+  padding-bottom: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
   /* box-shadow: 0px 7px 5px 0px rgba(238,238,238,1); */
 }
 
@@ -233,15 +245,18 @@ nav a {
 }
 
 .content {
-  position: fixed;
+  /* position: relative; */
+
   padding: 0px;
-  margin: 0px;
-  top: 67px;
-  height: calc(100vh - 66px);
+  /* margin: 0px; */
+  margin-top: 67px;
+  /* top: 0px; */
+  height: calc(100% - 67px);
+  /* height: calc(100vh); */
   /* min-width: 375px; */
-  width: 100vw;
+  width: auto;
   /* overflow: scroll; */
-  overflow: auto;
+  /* overflow: auto; */
   /* background-color: red; */
   z-index: 1;
 }
@@ -260,7 +275,7 @@ nav a {
 
 
 .scroll-fade-bottom {
-  position: absolute;
+  position: fixed;
   content:'';
   bottom:0px;
   height: 15px;

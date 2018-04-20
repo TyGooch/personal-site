@@ -175,7 +175,7 @@ class App extends React.Component{
               }
               />
 
-            <div className="content" style={this.state.isMobile ? {height: 'calc(100% - 87px)', top: '87px'} : null}>
+            <div className="content" style={this.state.isMobile ? {marginTop: '87px'} : null}>
               <Routes component={AnimatedRoutes} />
             </div>
 
