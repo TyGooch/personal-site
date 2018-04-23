@@ -190,22 +190,7 @@ class App extends React.Component{
     return(
       <Router type='browser'>
         <div className="app-container">
-          <nav className="header">
-            <Link to={{pathname: "/"}} exact activeClassName="header-logo-active" className="header-logo"><img src={logoImage} alt="" /></Link>
-            <nav className={`header-links`} style={ this.isMobile() ? {top: '64.5px', width: 'calc(100vw - 30px)', maxWidth: '600px', alignSelf: 'center', minWidth: '300px', paddingBottom: '6px', paddingLeft: '15px', paddingRight: '15px'} : null} >
-              <Link key={0} to={{pathname: "/about"}} className = "header-link"  activeStyle={{width: 'auto', height: 'inherit'}} style={{marginRight: this.isMobile() ? '0px' : '0px'}}><span className='header-link-text'>ABOUT</span></Link>
-              <Prefetch path='/portfolio'><Link to={{pathname: "/portfolio"}} className = "header-link" activeStyle={{width: 'auto', height: 'inherit'}} style={{marginRight: this.isMobile() ? '0px' : '0px'}}><span className='header-link-text'>PORTFOLIO</span></Link></Prefetch>
-              <Link to={{pathname: "/resume"}} className = "header-link" activeStyle={{width: 'auto', height: 'inherit'}} style={{marginRight: this.isMobile() ? '0px' : '0px'}}><span className='header-link-text'>RESUME</span></Link>
-              <Link to={{pathname: "/contact"}} className = "header-link" activeStyle={{width: 'auto', height: 'inherit'}} style={{marginRight: this.isMobile() ? '0px' : '0px'}}><span className='header-link-text'>CONTACT</span></Link>
-            </nav>
-            <div>
-              <nav className="social-links">
-                <a href='https://github.com/tygooch' className='social-link'><i className='fab fa-github'></i></a>
-                <a href='https://linkedin.com/in/tygooch' className='social-link'><i className='fab fa-linkedin-in'></i></a>
-                <a href='https://facebook.com/tybradleygooch' className='social-link'><i className='fab fa-facebook-f'></i></a>
-              </nav>
-            </div>
-          </nav>
+
 
           <Particles
             className="particles"
@@ -228,7 +213,23 @@ class App extends React.Component{
             }
             />
 
-          <div className="content" style={this.isMobile() ? {marginTop: '86px'} : null}>
+          <div className="content" style={this.isMobile() ? {marginTop: null} : null}>
+            <nav className="header" style={this.isMobile() ? {paddingBottom: '25px'} : null}>
+              <Link to={{pathname: "/"}} exact activeClassName="header-logo-active" className="header-logo"><img src={logoImage} alt="" /></Link>
+              <nav className={`header-links`} style={ this.isMobile() ? {top: '64.5px', width: 'calc(100vw - 30px)', maxWidth: '600px', alignSelf: 'center', minWidth: '300px', paddingBottom: '6px', paddingLeft: '15px', paddingRight: '15px'} : null} >
+                <Link key={0} to={{pathname: "/about"}} className = "header-link"  activeStyle={{width: 'auto', height: 'inherit'}} style={{marginRight: this.isMobile() ? '0px' : '0px'}}><span className='header-link-text'>ABOUT</span></Link>
+                <Prefetch path='/portfolio'><Link to={{pathname: "/portfolio"}} className = "header-link" activeStyle={{width: 'auto', height: 'inherit'}} style={{marginRight: this.isMobile() ? '0px' : '0px'}}><span className='header-link-text'>PORTFOLIO</span></Link></Prefetch>
+                <Link to={{pathname: "/resume"}} className = "header-link" activeStyle={{width: 'auto', height: 'inherit'}} style={{marginRight: this.isMobile() ? '0px' : '0px'}}><span className='header-link-text'>RESUME</span></Link>
+                <Link to={{pathname: "/contact"}} className = "header-link" activeStyle={{width: 'auto', height: 'inherit'}} style={{marginRight: this.isMobile() ? '0px' : '0px'}}><span className='header-link-text'>CONTACT</span></Link>
+              </nav>
+              <div>
+                <nav className="social-links">
+                  <a href='https://github.com/tygooch' className='social-link'><i className='fab fa-github'></i></a>
+                  <a href='https://linkedin.com/in/tygooch' className='social-link'><i className='fab fa-linkedin-in'></i></a>
+                  <a href='https://facebook.com/tybradleygooch' className='social-link'><i className='fab fa-facebook-f'></i></a>
+                </nav>
+              </div>
+            </nav>
             <Routes component={AnimatedRoutes} />
           </div>
 
