@@ -228,7 +228,7 @@ class App extends React.Component{
             }
             />
 
-          <div className="content" style={this.isMobile() ? {top: '86px'} : null}>
+          <div className="content" style={this.isMobile() ? {marginTop: '86px'} : null}>
             <Routes component={AnimatedRoutes} />
           </div>
 

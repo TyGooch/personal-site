@@ -1,5 +1,6 @@
 html {
-  
+  /* height: 100vh;
+  overflow: auto; */
 }
 
 body {
@@ -44,9 +45,12 @@ nav a {
 }
 
 .app-container {
-  height: inherit;
+  height: auto;
   width: 100%;
   position: relative;
+  top: 0;
+  bottom: 0;
+  background: red;
 }
 
 .header {
@@ -252,8 +256,11 @@ nav a {
 }
 
 .content {
-  position: relative;
-  top: 67px;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  margin-top: 67px;
 
   padding: 0px;
   /* margin: 0px; */
@@ -274,8 +281,10 @@ nav a {
 .content::before {
   position: fixed;
   content:'';
-  top:inherit;
-  height: 25px;
+  /* margin-top:inherit; */
+  left: 0;
+  right: 0;
+  height: 35px;
   width: 100%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   /* background-color: red; */
