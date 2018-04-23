@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link, withSiteData } from 'react-static'
+import { Link, withRouteData } from 'react-static'
 
 import './about.css'
 
-export default () => (
+export default withRouteData(() => (
   <div className='about-container'>
     <div className='about-header' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {fontSize: '30px', paddingTop: '0px'} : null : null}>
       WHAT I DO
@@ -117,4 +117,5 @@ export default () => (
       </div>
     </div>
   </div>
+)
 )

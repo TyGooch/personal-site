@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'react-static'
+import { withRouteData, Link } from 'react-static'
 
 import './resume.css'
 
-export default() => (
+export default withRouteData(() => (
     <div className="resume-container">
       <div className="resume-content">
         <div className="resume-header">
@@ -145,4 +145,5 @@ export default() => (
         <br />
       </div>
     </div>
+)
 )

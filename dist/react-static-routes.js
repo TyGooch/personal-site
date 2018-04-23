@@ -2,15 +2,30 @@
 
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
+
 import universal, { setHasBabelPlugin } from 'react-universal-component'
+
 import { cleanPath } from 'react-static'
 
-import t_0 from '../src/components/Home/Home'
-import t_1 from '../src/components/About/About'
-import t_2 from '../src/components/Portfolio/Portfolio'
-import t_3 from '../src/components/Resume/Resume'
-import t_4 from '../src/components/Contact/Contact'
-import t_5 from '../src/components/404/404'
+
+
+setHasBabelPlugin()
+
+const universalOptions = {
+  loading: () => null,
+  error: props => {
+    console.error(props.error);
+    return <div>An error occurred loading this page's template. More information is available in the console.</div>;
+  },
+}
+
+  const t_0 = universal(import('../src/components/Home/Home'), universalOptions)
+const t_1 = universal(import('../src/components/About/About'), universalOptions)
+const t_2 = universal(import('../src/components/Portfolio/Portfolio'), universalOptions)
+const t_3 = universal(import('../src/components/Resume/Resume'), universalOptions)
+const t_4 = universal(import('../src/components/Contact/Contact'), universalOptions)
+const t_5 = universal(import('../src/components/404/404'), universalOptions)
+
 
 // Template Map
 global.componentsByTemplateID = global.componentsByTemplateID || [
@@ -78,10 +93,12 @@ export default class Routes extends Component {
     return (
       <Route path='*' render={props => {
         let Comp = getFullComponentForPath(props.location.pathname)
-        return <Comp key={props.location.pathname} {...props} />
+        // If Comp is used as a component here, it triggers React to re-mount the entire
+        // component tree underneath during reconciliation, losing all internal state.
+        // By unwrapping it here we keep the real, static component exposed directly to React.
+        return Comp && Comp({ ...props, key: props.location.pathname })
       }} />
     )
   }
 }
 
-    

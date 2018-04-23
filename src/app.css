@@ -1,3 +1,7 @@
+html {
+  
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -35,11 +39,14 @@ nav {
 nav a {
 }
 
+#root {
+  height: 100%;
+}
+
 .app-container {
-  height: 100vh;
+  height: inherit;
   width: 100%;
-  position: fixed;
-  overflow: scroll;
+  position: relative;
 }
 
 .header {
@@ -81,7 +88,7 @@ nav a {
   /* margin-top: calc(27.5px); */
   /* margin-top: 42px; */
   /* padding-right: 15px; */
-  position: fixed;
+  position: absolute;
   top: 42px;
   bottom: 0px;
   height: 1em;
@@ -100,7 +107,7 @@ nav a {
 
 .header-links.mobile {
   position: absolute;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   top: 64.5px;
   /* left: calc(15px); */
   width: calc(100vw - 30px);
@@ -245,19 +252,22 @@ nav a {
 }
 
 .content {
-  /* position: relative; */
+  position: relative;
+  top: 67px;
 
   padding: 0px;
   /* margin: 0px; */
-  margin-top: 67px;
+  /* padding-top: 67px; */
   /* top: 0px; */
-  height: calc(100% - 67px);
+  /* height: calc(100% - 88px); */
+  /* height: 100%; */
   /* height: calc(100vh); */
   /* min-width: 375px; */
   width: auto;
+  height: auto;
+  overflow: visible;
   /* overflow: scroll; */
   /* overflow: auto; */
-  /* background-color: red; */
   z-index: 1;
 }
 

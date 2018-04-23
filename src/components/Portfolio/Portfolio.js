@@ -1,5 +1,5 @@
 import React from 'react'
-import { withSiteData, Link } from 'react-static'
+import { withRouteData, Link } from 'react-static'
 import ucsbMapImage from '../../assets/ucsbMapImage.svg'
 import ucsbMapMacImage from '../../assets/ucsbMapMacImage.png'
 import ucsbMapIphoneImage from '../../assets/ucsbMapIphoneImage.png'
@@ -7,7 +7,7 @@ import ivEmergencyDispatchImage from '../../assets/ivEmergencyDispatchImage.png'
 
 import './portfolio.css'
 
-export default withSiteData(() => (
+export default withRouteData(() => (
   <div className='portfolio-container'>
     <div className='portfolio-header' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {fontSize: '30px', paddingTop: '0px'} : null : null}>
       WHAT I MAKE
