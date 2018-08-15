@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/10.7.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js stage
+  /usr/local/Cellar/node/10.7.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js build
 
 PATH: 
   /Users/tygooch/.rvm/gems/ruby-2.4.0/bin:/Users/tygooch/.rvm/gems/ruby-2.4.0@global/bin:/Users/tygooch/.rvm/rubies/ruby-2.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/tygooch/.rvm/bin:/usr/local/mongodb/bin
@@ -7796,7 +7796,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c react-static build --staging
+  Arguments: -c react-static build
   Directory: /Users/tygooch/Documents/Projects/personal-site/personal-site
   Output:
   

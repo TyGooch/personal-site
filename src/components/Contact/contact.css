@@ -11,7 +11,7 @@
 .contact-header {
   text-align: center;
   font-weight: 600;
-  font-size: 50px;
+  font-size: 36px;
   vertical-align: middle;
 }
 
@@ -80,6 +80,8 @@
   /* margin-bottom: 10px; */
   width: 100%;
   margin: 0;
+  border: .5px solid rgba(0,0,0,0.25);
+  box-shadow: -3px 5px 13px -3px rgba(0,0,0,0.75);
   /* border: none;
   border-bottom: 3px solid black; */
 }
@@ -87,10 +89,12 @@
 .message-input {
   outline: 0;
 	height: 120px;
-	border: 1px solid #cccccc;
+	/* border: 1px solid #cccccc; */
 	padding: 10px;
   resize: none;
   width: 100%;
+  border: .5px solid rgba(0,0,0,0.25);
+  box-shadow: -3px 5px 13px -3px rgba(0,0,0,0.75);
 }
 
 .contact-form-submit-container {
@@ -107,6 +111,7 @@
   width: 100%;
   font-weight: 200;
   border: none;
+  box-shadow: -3px 5px 13px -3px rgba(0,0,0,0.75);
 }
 
 .contact-form-submit:hover {

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
 export default {
+  preact: true,
   siteRoot: 'https://tygooch.com',
   stagingSiteRoot: './',
   getSiteData: () => ({

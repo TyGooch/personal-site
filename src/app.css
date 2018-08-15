@@ -48,9 +48,6 @@ nav a {
   height: auto;
   width: 100%;
   position: relative;
-  top: 0;
-  bottom: 0;
-  background: red;
 }
 
 .header {
@@ -61,7 +58,8 @@ nav a {
   display: flex;
   flex-direction: row;
   /* justify-content: space-between; */
-  position: sticky;
+  /* position: sticky; */
+  position: static;
   top: 0px;
   left: 0;
   right: 0;
@@ -90,17 +88,10 @@ nav a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* margin-top: calc(27.5px); */
-  /* margin-top: 42px; */
-  /* padding-right: 15px; */
   position: absolute;
   top: 42px;
   bottom: 0px;
   height: 1em;
-  /* padding-left: 15px;
-  padding-right: 15px; */
-  /* width: 100%; */
-  /* width: calc(100% - 280px); */
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -111,11 +102,10 @@ nav a {
 }
 
 .header-links.mobile {
-  position: absolute;
   /* justify-content: space-between; */
   top: 64.5px;
   /* left: calc(15px); */
-  width: calc(100vw - 30px);
+  width: calc(100% - 30px);
   max-width: 600px;
   align-self: center;
   min-width: 300px;
@@ -259,7 +249,7 @@ nav a {
 }
 
 .content {
-  position: absolute;
+  position: relative;
   top:0;
   left:0;
   right:0;
@@ -281,23 +271,20 @@ nav a {
   z-index: 1;
 }
 
-.header::after {
+/* .header::after {
   position: absolute;
   top: 100%;
   content:'';
   margin-top:inherit;
-  /* top: inherit; */
-  /* margin-top: 21.5px; */
-  /* bottom: 50px; */
   left: 0;
   right: 0;
   height: 25px;
   width: inherit;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  /* background-color: red; */
   z-index: 10000;
+  display: none;
 
-}
+} */
 
 
 .scroll-fade-bottom {
@@ -308,6 +295,7 @@ nav a {
   width: 100%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
   z-index: 1;
+  display: none;
 }
 
 .particles-canvas {
@@ -317,5 +305,5 @@ nav a {
   left: 0;
   right: 0;
   z-index: -1;
-  display: none;
+  max-height: calc(100vh - 87.5px);
 }
