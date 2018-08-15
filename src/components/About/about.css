@@ -22,7 +22,7 @@
   /* line-height: 60px; */
 }
 
-.about-header::before {
+/* .about-header::before {
   content: '– ';
   font-family: Poppins;
   color: #cf000f;
@@ -31,7 +31,7 @@
   content: ' –';
   font-family: Poppins;
   color: #cf000f;
-}
+} */
 
 .about-section-container {
   display: flex;
@@ -109,6 +109,7 @@
 .skills-header {
   font-weight: 800;
   font-size: 16px;
+  padding-bottom: 2.5px;
 }
 
 .about-contact-link {

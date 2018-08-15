@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
 export default {
-  preact: true,
-  // siteRoot: './',
-  // stagingSiteRoot: './',
+  siteRoot: 'https://tygooch.com',
+  stagingSiteRoot: './',
   getSiteData: () => ({
     title: 'Ty Gooch',
+    metaDescription: "Ty Gooch\'s Personal Website And Portfolio"
   }),
   getRoutes: () => {
     return [
@@ -32,7 +32,7 @@ export default {
       },
       {
         is404: true,
-        component: 'src/components/404/404',
+        component: 'src/components/Home/Home',
       },
     ]
   },
@@ -54,6 +54,7 @@ export default {
            <title>Ty Gooch</title>
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="shortcut icon" href="/favicon.ico" />
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossOrigin="anonymous"/>
             <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700,800,900|Roboto:100,300,400,500,700,900" rel="stylesheet" />
             {renderMeta.styleTags}

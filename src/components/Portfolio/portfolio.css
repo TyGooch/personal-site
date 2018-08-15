@@ -16,7 +16,7 @@
   /* line-height: 60px; */
 }
 
-.portfolio-header::before {
+/* .portfolio-header::before {
   content: '– ';
   font-family: Poppins;
   color: #cf000f;
@@ -25,7 +25,7 @@
   content: ' –';
   font-family: Poppins;
   color: #cf000f;
-}
+} */
 
 #portfolio-image {
   width: 500px;

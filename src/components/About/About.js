@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link, withRouteData } from 'react-static'
+import { Link } from 'react-static'
 
 import './about.css'
 
-export default withRouteData(() => (
+export default () => (
   <div className='about-container'>
     <div className='about-header' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {fontSize: '30px', paddingTop: '0px'} : null : null}>
-      WHAT I DO
+      HEY I'M TY
     </div>
 
     <div className='about-section-container'>
@@ -18,23 +18,13 @@ export default withRouteData(() => (
         </div>
         <div className='about-section-text' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '100%', fontSize: '16px', } : {} : null}>
           <span>
-            I’m a frontend software developer and 3rd year student at UC Santa
-            Barbara set to graduate from the College of Engineering in 2019 with
-            a B.S. in Computer Science.
+            I’m a frontend software developer and 4th year student at UC Santa Barbara set to graduate from the College of Engineering in 2019 with a B.S. in Computer Science.
             <br />
             <br />
-            As a frontend developer, I stradle the border between engineering and
-            design, combining the latest technologies with modern design standards
-            to build sleek web apps. To ensure my work delivers a solid user
-            experience, I focus on to develop engaging, responsive interfaces with an
-            emphasis on simplicity.
+            As a frontend developer, I straddle the border between engineering and design, combining the latest technologies with modern design standards to build sleek web apps. To ensure my work delivers a solid user experience, I focus on developing engaging, responsive interfaces with an emphasis on simplicity.
             <br />
             <br />
-            I’m currently available for work and am actively seeking an
-            internship that will put my JavaScript abilities to the test and help me
-            become a better software engineer. If your team needs an open-minded problem
-            solver with a strong backgound in JavaScript, I'm your guy.
-
+            I’m currently available for work and am actively seeking an internship that will put my JavaScript abilities to the test and help me become a better software engineer. If your team needs an open-minded problem solver with a strong background in JavaScript, I'm your guy.
           </span>
         </div>
       </div>
@@ -117,5 +107,4 @@ export default withRouteData(() => (
       </div>
     </div>
   </div>
-)
 )

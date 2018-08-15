@@ -3,7 +3,7 @@ import { withRouteData, Link } from 'react-static'
 
 import './resume.css'
 
-export default withRouteData(() => (
+export default () => (
     <div className="resume-container">
       <div className="resume-content">
         <div className="resume-header">
@@ -145,5 +145,4 @@ export default withRouteData(() => (
         <br />
       </div>
     </div>
-)
 )
