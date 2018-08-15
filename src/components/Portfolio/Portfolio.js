@@ -7,10 +7,9 @@ import ivEmergencyDispatchImage from '../../assets/ivEmergencyDispatchImage.png'
 
 import './portfolio.css'
 
-export default withRouteData(() => (
+export default () => (
   <div className='portfolio-container'>
     <div className='portfolio-header' style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {fontSize: '30px', paddingTop: '0px'} : null : null}>
-      WHAT I MAKE
     </div>
 
     <div style={typeof window !== 'undefined' ? window.innerWidth < 950 ? {width: '100%', textAlign: 'center'} : {float: 'right'} : null}>
@@ -24,4 +23,4 @@ export default withRouteData(() => (
     </div>
 
   </div>
-))
+)

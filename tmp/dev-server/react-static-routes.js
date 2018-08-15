@@ -10,7 +10,6 @@ import t_1 from '../../src/components/About/About'
 import t_2 from '../../src/components/Portfolio/Portfolio'
 import t_3 from '../../src/components/Resume/Resume'
 import t_4 from '../../src/components/Contact/Contact'
-import t_5 from '../../src/components/404/404'
 
 // Template Map
 global.componentsByTemplateID = global.componentsByTemplateID || [
@@ -18,13 +17,12 @@ global.componentsByTemplateID = global.componentsByTemplateID || [
 t_1,
 t_2,
 t_3,
-t_4,
-t_5
+t_4
 ]
 
 // Template Tree
 global.templateIDsByPath = global.templateIDsByPath || {
-  '404': 5
+  '404': 0
 }
 
 // Get template for given path

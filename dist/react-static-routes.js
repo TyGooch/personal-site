@@ -24,7 +24,6 @@ const t_1 = universal(import('../src/components/About/About'), universalOptions)
 const t_2 = universal(import('../src/components/Portfolio/Portfolio'), universalOptions)
 const t_3 = universal(import('../src/components/Resume/Resume'), universalOptions)
 const t_4 = universal(import('../src/components/Contact/Contact'), universalOptions)
-const t_5 = universal(import('../src/components/404/404'), universalOptions)
 
 
 // Template Map
@@ -33,13 +32,12 @@ global.componentsByTemplateID = global.componentsByTemplateID || [
 t_1,
 t_2,
 t_3,
-t_4,
-t_5
+t_4
 ]
 
 // Template Tree
 global.templateIDsByPath = global.templateIDsByPath || {
-  '404': 5
+  '404': 0
 }
 
 // Get template for given path
